@@ -12,4 +12,24 @@
 
 # Form data transmission
 * Make form using [Bootstrap](https://getbootstrap.com/) (`articles/new.mustache`)
-* Model : Send data shown in a final web page to `View`
+* Receive data sent by `post` method from From (`controller/ArticleController`)
+* Define `DTO`(Data Transfer Object) as java class (`dto/ArticleForm`)
+* The value of `name` attribute in Form should be same as the name of variable in DTO class
+`<input type="text" class="form-control" name="title">`
+`public class ArticleForm {
+    private String title;
+    private String content;
+
+    public ArticleForm(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "ArticleForm{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
+}`
