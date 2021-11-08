@@ -11,5 +11,5 @@
 * Link view(`viewTemp.mustache`) to web page(`/viewtemp`) using annotation `@GetMapping("/viewtemp")`
 
 # Form data transmission
-* Model : Send data shown in a final web page to `View`
+* Make form using [Bootstrap](https://getbootstrap.com/) (`articles/new.mustache`)
 * Model : Send data shown in a final web page to `View`
