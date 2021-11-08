@@ -7,7 +7,7 @@
 
 # View template & layout
 * layout : define *header* and *footer* seperately (`layouts/header.mustache`, `layouts/footer.mustache`)
-* Fetche layouts using `{{>layouts/header}}` and `{{>layouts/footer}}` (refere `viewTemp.mustache`)
+* Fetche layouts using `{{>layouts/header}}` and `{{>layouts/footer}}` (refer `viewTemp.mustache`)
 * Link view(`viewTemp.mustache`) to web page(`/viewtemp`) using annotation `@GetMapping("/viewtemp")`
 
 # Form data transmission
