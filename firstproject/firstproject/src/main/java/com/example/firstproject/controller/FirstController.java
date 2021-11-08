@@ -28,4 +28,10 @@ public class FirstController {
         model.addAttribute("nickname", "Damon");
         return "goodbye";
     }
+
+    @GetMapping("/viewtemp")
+    public String viewTemplate(Model model){
+        model.addAttribute("username", "Damon");
+        return "viewTemp";
+    }
 }
