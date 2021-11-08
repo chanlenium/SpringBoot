@@ -15,8 +15,11 @@
 * Receive data sent by `post` method from From (`controller/ArticleController`)
 * Define `DTO`(Data Transfer Object) as java class (`dto/ArticleForm`)
 * The value of `name` attribute in Form should be same as the name of variable in DTO class
-`<input type="text" class="form-control" name="title">`
-`public class ArticleForm {
+```
+<input type="text" class="form-control" name="title">
+```
+```
+public class ArticleForm {
     private String title;
     private String content;
 
@@ -32,4 +35,5 @@
                 ", content='" + content + '\'' +
                 '}';
     }
-}`
+}
+```
