@@ -1,5 +1,7 @@
 package com.example.firstproject.dto;
 
+import com.example.firstproject.entity.Article;
+
 /** Form data를 받아올 그릇 */
 public class ArticleForm {
     private String title;
@@ -16,5 +18,9 @@ public class ArticleForm {
                 "title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 '}';
+    }
+
+    public Article toEntity() {
+        return new Article(null, this.title, this.content);
     }
 }

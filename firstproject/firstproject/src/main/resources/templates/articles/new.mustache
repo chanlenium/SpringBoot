@@ -1,17 +1,17 @@
 {{>layouts/header}}
 
-<!-- action 속성 : 어디로 보낼지 (ex. `/articles/create` url로 보냄)
-     method 속성 : 어떻게 보낼지 -->
+<!-- action attribute => where to send? (ex. send form data to url `/articles/create`)
+     method attribute => how to send? -->
 <form class="container" action="/articles/create" method="post">
     <div class="mb-3">
         <label class="form-label">Title</label>
-        <!-- input으로 넣은 값을 title이라는 변수에 저장 (변수명 `title`은 DTO의 필드명과 동일) -->
+        <!-- user input으로 넣은 값을 title이라는 변수에 저장 (variable `title` should be same as the field in DTO) -->
         <input type="text" class="form-control" name="title">
     </div>
 
     <div class="mb-3">
         <label class="form-label">Content</label>
-        <!-- input으로 넣은 값을 content라는 변수에 저장 (변수명 `content`는 DTO의 필드명과 동일) -->
+        <!-- user input으로 넣은 값을 content라는 변수에 저장 (variable `content` should be same as the field in DTO) -->
         <textarea class="form-control" rows=""3 name="content"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
