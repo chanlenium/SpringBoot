@@ -43,4 +43,51 @@ public class ArticleForm {
 * Key tools of JPA are *Entity* and *Repository*
 * *Entity* is a standardized data that DB can understand it
 * *Repository* sends the standardized entity to database
+
+1. Make entity class (`entity/Article.java`)
+```css
+@Entity // Add `@Entity` annotation, so that DB can understand the Article object
+public class Article {
+
+    @Id // Set this variable as primary key
+    @GeneratedValue // auto generation
+    private Long id;
+
+    @Column // make column
+    private String title;
+
+    @Column // make column
+    private String content;
+
+    // constructor
+    public Article(Long id, String title, String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
+}
+```
+
+2. Create an entity (define `toEntity()` in `ArticleForm`)
+```
+Article artile = form.toEntity();
+```
+
+3. Make Repository interface (/repository/ArticleRepository)
+```
+/** Use repository interface provided in JPA library
+ * CrudRepository<A, B>
+ *     A : name of entity class
+ *     B : type of primary key
+ */
+public interface ArticleRepository extends CrudRepository<Article, Long> {
+    // Inherit a `CrudRepository` to use CRUD operation for Article entity 
+}
+```
+
+4. Repository saves the entity in DB
+```
+Article saved = articleRepository.save(artile);
+```
+
   
