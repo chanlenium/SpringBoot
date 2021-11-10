@@ -38,11 +38,9 @@ public class ArticleForm {
 }
 ```
 
-
-using `H2` database and `JPA`
-DB deos not know JAVA
-JPA helps DB understand JAVA language
-Key tools of JPA are `Entity` and `Repository`
-Entity는 자바객체를 db가 이해할 수 있도록 규격화 한 data
-잘 규격화된 entity는 repository라는 일꾼을 통해 db에 전달되고 처리됨
+# Create data with `JPA` and `H2` database
+* DB does not know JAVA language, so we use `JPA` for DB to understand JAVA language
+* Key tools of JPA are *Entity* and *Repository*
+* *Entity* is a standardized data that DB can understand it
+* *Repository* sends the standardized entity to database
   
