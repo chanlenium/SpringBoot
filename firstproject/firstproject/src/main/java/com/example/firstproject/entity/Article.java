@@ -5,19 +5,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity // `@Entity` annotation이 있어야 DB가 해당 객체를 인식 가능
+@Entity // Add `@Entity` annotation, so that DB can understand the Article object
 public class Article {
 
-    @Id // primary key값 지정
-    @GeneratedValue
+    @Id // Set this variable as primary key
+    @GeneratedValue // auto generation
     private Long id;
 
-    @Column
+    @Column // make column
     private String title;
 
-    @Column
+    @Column // make column
     private String content;
 
+    // constructor
     public Article(Long id, String title, String content) {
         this.id = id;
         this.title = title;

@@ -25,12 +25,14 @@ public class ArticleController {
         // post방식으로 던진 data가 DTO객체(ArticleForm)의 parameter(form)으로 던져짐
         System.out.println(form.toString());
 
-        /** create data with JPA */
-        // 1. dto(form data)를 entity로 변환환
-        Article artile = form.toEntity();   // entity 생성
+        /** Create data with JPA and H2 */
+        // step 1) Make entity class (/entity/Article.java)
+        // step 2) Translate DTO(form data) to entity, so that DB can understand JAVA language
+        Article artile = form.toEntity();   // Create an entity (define toEntity() in ArticleForm)
         System.out.println(artile.toString());
 
-        // 2. repository에게 entity를 DB안에 저장하게 함
+        // step 3) Make Repository interface (/repository/ArticleRepository)
+        // step 4) Repository saves the entity in DB
         Article saved = articleRepository.save(artile);
         System.out.println(saved.toString());
 
