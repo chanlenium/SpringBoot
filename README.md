@@ -15,6 +15,9 @@
 * Receive data sent by `post` method from From (`controller/ArticleController`)
 * Define `DTO`(Data Transfer Object) as java class (`dto/ArticleForm`)
 * The value of `name` attribute in Form should be same as the name of variable in DTO class
+
+<img src="https://github.com/chanlenium/SpringBoot/blob/main/Create%20data%20with%20JPA.JPG" width="600" height="200" />
+
 ```
 <input type="text" class="form-control" name="title">
 ```
@@ -44,7 +47,7 @@ public class ArticleForm {
 * *Entity* is a standardized data that DB can understand it
 * *Repository* sends the standardized entity to database
 
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/03_Android%20more%20UI%20elements/Lab2/Screenshots.png" width="600" height="350" />
+<img src="https://github.com/chanlenium/SpringBoot/blob/main/Create%20data%20with%20JPA.JPG" width="600" height="200" />
 
 1. Make entity class (`entity/Article.java`)
 ```css
