@@ -44,6 +44,8 @@ public class ArticleForm {
 * *Entity* is a standardized data that DB can understand it
 * *Repository* sends the standardized entity to database
 
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/03_Android%20more%20UI%20elements/Lab2/Screenshots.png" width="600" height="350" />
+
 1. Make entity class (`entity/Article.java`)
 ```css
 @Entity // Add `@Entity` annotation, so that DB can understand the Article object
