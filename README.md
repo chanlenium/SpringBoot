@@ -95,4 +95,12 @@ public interface ArticleRepository extends CrudRepository<Article, Long> {
 Article saved = articleRepository.save(artile);
 ```
 
+# DB table and SQL
+* `H2` database setting (/resources/application.properties)
+```
+# h2 DB를 web console로 접근할 수 있도록 설정
+spring.h2.console.enabled = true 
+```
+* Access data base (`localhost:8080/h2-console`) and set JDBC URL in console window of the intellij
+
   
