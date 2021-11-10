@@ -95,4 +95,5 @@ public interface ArticleRepository extends CrudRepository<Article, Long> {
 Article saved = articleRepository.save(artile);
 ```
 
+# DB table and SQL
   
