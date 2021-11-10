@@ -16,7 +16,7 @@
 * Define `DTO`(Data Transfer Object) as java class (`dto/ArticleForm`)
 * The value of `name` attribute in Form should be same as the name of variable in DTO class
 
-<img src="https://github.com/chanlenium/SpringBoot/blob/main/Create%20data%20with%20JPA.JPG" width="600" height="200" />
+<img src="https://github.com/chanlenium/SpringBoot/blob/main/Sending%20form%20data.JPG" width="600" height="200" />
 
 ```
 <input type="text" class="form-control" name="title">
