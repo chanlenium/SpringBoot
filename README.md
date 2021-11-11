@@ -170,6 +170,6 @@ public class Article {
 5. Logging : Do not use `System.out.println()` anymore (`/controller/ArticleController`) 
 * Add annotation `@Slf4j`
 * Use `log.info()` instead of `System.out.println()`
-<img src="https://github.com/chanlenium/SpringBoot/blob/main/lombok_result.JPG" width="600" height="200" />
+<img src="https://github.com/chanlenium/SpringBoot/blob/main/lombok_result.JPG" />
 
   
