@@ -103,4 +103,71 @@ spring.h2.console.enabled = true
 ```
 * Access data base (`localhost:8080/h2-console`) and set JDBC URL in console window of the intellij
 
-  
+# Lombok and Refactoring
+* Minimize code repitition -> simplify code (*Refactoring*)
+* *Logging* is the work to record the process of program
+1. Add dependencies for *Lombok* in `build.gradle`
+```
+dependencies {
+	...
+
+	// add dependency for Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+}
+```
+
+2. Install Lombok plugin 
+* help -> find action -> Search `Lombok` -> Market place tab -> Install Lombok
+
+3. DTO refactoring (`/dto/ArticleForm`)
+* add annotation `@AllArgsConstructor` and `@ToString`. Delete previous constructor and ToString method 
+```
+@AllArgsConstructor
+@ToString
+public class ArticleForm {
+    private String title;
+    private String content;
+
+//    public ArticleForm(String title, String content) {
+//        this.title = title;
+//        this.content = content;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "ArticleForm{" +
+//                "title='" + title + '\'' +
+//                ", content='" + content + '\'' +
+//                '}';
+//    }
+
+    public Article toEntity() {
+        return new Article(null, this.title, this.content);
+    }
+}
+```
+
+4. Entity refactoring (`/entity/Article`)
+```
+@AllArgsConstructor
+@ToString
+@Entity // Add `@Entity` annotation, so that DB can understand the Article object
+public class Article {
+
+    @Id // Set this variable as primary key
+    @GeneratedValue // auto generation
+    private Long id;
+
+    @Column // make column
+    private String title;
+
+    @Column // make column
+    private String content;
+}
+```
+
+5. Logging : Do not use `System.out.println()` anymore (`/controller/ArticleController`) 
+* Add annotation `@Slf4j`
+* Use `log.info()` instead of `System.out.println()`
+<img src="https://github.com/chanlenium/SpringBoot/blob/main/lombok_result.JPG" />
